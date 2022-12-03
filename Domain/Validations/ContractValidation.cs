@@ -20,7 +20,7 @@ namespace Domain.Validations
 
         public bool IsValid()
         {
-            return _notifications.Count == 0;
+            return (_notifications.Count == 0 ? true : false);
         }
     }
 }
