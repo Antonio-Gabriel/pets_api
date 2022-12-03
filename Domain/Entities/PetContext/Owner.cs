@@ -25,9 +25,10 @@ namespace Domain.Entities.PetContext
         {
             var contract = new ContractValidation<Owner>()
                 .FirstNameIsOk(this.Name, 20, 5, "The first name needed to has between 5 and 20 charecters", "FirstName")
-                .LastNameIsOk(this.Name, 20, 5, "The last name needed to has between 5 and 20 charecters", "LastName");
+                .LastNameIsOk(this.Name, 20, 5, "The last name needed to has between 5 and 20 charecters", "LastName")
+                .EmailIsValid(this.Email, "Invalid email, please check", "Email");
 
-            return true;
+            return contract.IsValid();
         }
     }
 }
