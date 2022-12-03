@@ -21,7 +21,7 @@ namespace Domain.Entities.PetContext
 
         public override bool Validate()
         {
-            var contract = new ContractValidation<Owner>()
+            var contract = new ContractValidation<Pet>()
                 .FirstNameIsOk(this.Name, 20, 5, "The first name needed to has between 5 and 20 charecters", "FirstName")
                 .LastNameIsOk(this.Name, 20, 5, "The last name needed to has between 5 and 20 charecters", "LastName");
 
