@@ -1,5 +1,4 @@
 using Domain.Notifications;
-using Domain.ValueObjects;
 
 namespace Domain.Validations
 {
